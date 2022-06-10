@@ -1,0 +1,4 @@
+.views-accordion-header-image-center ~ div .field-content img {
+    display: flex;
+    margin: 0 auto;
+}

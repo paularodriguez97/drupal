@@ -21,6 +21,9 @@ views.style.views_accordion:
     collapsible:
       type: integer
       label: 'Collapsible'
+    Center image:
+      type: integer
+      label: 'Center image'
     animated:
       type: string
       label: 'Animation effect'

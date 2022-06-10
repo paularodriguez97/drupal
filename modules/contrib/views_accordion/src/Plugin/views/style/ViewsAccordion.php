@@ -36,6 +36,7 @@ class ViewsAccordion extends StylePluginBase {
     $options = parent::defineOptions();
     $options['use-grouping-header'] = ['default' => 0];
     $options['collapsible'] = ['default' => 0];
+    $options['image_center'] = ['default' => 0];
     $options['row-start-open'] = ['default' => 0];
     $options['animated'] = ['default' => 'slide'];
     $options['animation_time'] = ['default' => 300];
@@ -150,6 +151,12 @@ class ViewsAccordion extends StylePluginBase {
       '#default_value' => $this->options['collapsible'],
       '#description' => $this->t('Whether all the sections can be closed at once. Allows collapsing the active section.'),
     ];
+    $form['image_center'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Center image'),
+      '#default_value' => $this->options['image_center'],
+      '#description' => $this->t('Activate it if you want the image to be centered on the accordion'),
+    ];
     $form['animated'] = [
       '#type' => 'select',
       '#title' => $this->t('Animation effect'),
@@ -225,6 +232,12 @@ class ViewsAccordion extends StylePluginBase {
 
     $view_settings = [];
     $header_class = 'views-accordion-header';
+
+    $view_settings['image_center'] = $this->options['image_center'];
+
+    if ( $view_settings['image_center'] == 1 ) {
+      $header_class = 'views-accordion-header-image-center';
+    }
     // This is used for triggering the creation of the accordions.
     // We append the dom_id so that multiple nested views with accordions work.
     $accordion_header_class = 'js-' . $header_class . '-' . $this->view->dom_id;
