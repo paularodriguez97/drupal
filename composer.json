@@ -23,6 +23,7 @@
         "drupal/devel": "^4.1",
         "drupal/facebook_comments": "^1.0",
         "drupal/views_accordion": "^1.1",
+        "drupal/views_fieldsets": "^3.4",
         "drupal/webform": "^6.0",
         "drupal/webform_shs": "^1.0@alpha",
         "kint-php/kint": "^3.3"
