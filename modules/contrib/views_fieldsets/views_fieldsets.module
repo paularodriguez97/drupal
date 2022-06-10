@@ -9,6 +9,7 @@ use Drupal\Component\Utility\SortArray;
 use Drupal\Core\Render\Element;
 use Drupal\views_fieldsets\Plugin\views\field\Fieldset;
 use Drupal\views_ui\ViewUI;
+use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_theme().
@@ -50,6 +51,29 @@ function views_fieldsets_views_data() {
     ],
   ];
   return $data;
+}
+
+
+/**
+ * Implements hook_help().
+ */
+function views_fieldsets_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.views_fieldsets':
+      $output = '<p>' . t('Creates fieldset (and details and div) in Views fields output, to group fields,
+      by adding a new field: "Global: Fieldset" and a few preprocessors. Also
+      introduces a new template: views-fieldsets-fieldset.tpl.php where you can
+      customize your fieldset output.
+      ') . '</p>';
+
+      $output .= '<h3>' . t('For a full description of the module, visit the project page:') . '</h3>';
+      $output .= t('https://www.drupal.org/project/views_fieldsets') . '<br />';
+
+      $output .= '<h3>' . t('To submit bug reports and feature suggestions, or to track changes:') . '</h3>';
+      $output .= t('https://www.drupal.org/project/issues/views_fieldsets') . '<br />';
+
+      return $output;
+  }
 }
 
 /**
