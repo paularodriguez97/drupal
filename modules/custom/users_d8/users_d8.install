@@ -1,0 +1,64 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function users_d8_schema() {
+  $schema['myusers'] = [
+    'description' => 'Users D8 custom info',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'type' => 'varchar',
+        'length' => 256,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+    'unique keys' => [
+      'id' => ['id'],
+    ],
+  ];
+
+  $schema['access_log_user'] = [
+    'description' => 'Users log access',
+    'fields' => [
+      'id_log' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'fecha' => [
+        'type' => 'varchar',
+        'mysql_type' => 'datetime',
+        'not null' => TRUE,
+      ],
+      'ip' => [
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'type' => 'varchar',
+        'length' => 256,
+        'not null' => TRUE,
+      ],
+      'tipo_log' => [
+        'type' => 'varchar',
+        'length' => 30,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id_log'],
+    'unique keys' => [
+      'id_log' => ['id_log'],
+    ],
+  ];
+  return $schema;
+}
+
+function tigo_basket_activation_uninstall() {
+  db_drop_table('myusers');
+  db_drop_table('access_log_user');
+}

@@ -1,0 +1,7 @@
+scraping.admin_config:
+  path: 'admin/config/scraping'
+  defaults:
+    _form: '\Drupal\scraping\Form\ScrapingFormAnuncios'
+    _title: 'Actualizar Anuncisos'
+  requirements:
+    _permission: 'administer site configuration'

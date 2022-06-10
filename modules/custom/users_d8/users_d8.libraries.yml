@@ -1,0 +1,4 @@
+users_d8_main:
+  js:
+    lib/js/external/jquery.validate.min.js: {}
+    lib/js/validateInpust.js: {}

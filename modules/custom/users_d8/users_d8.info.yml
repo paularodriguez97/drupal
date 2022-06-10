@@ -1,0 +1,4 @@
+type: module
+name: Users module custom
+description: 'Modulo para registros y consulta de usuarios'
+core: 8.x

@@ -1,0 +1,14 @@
+administer users_register:
+  title: 'Administrador registro usuarios'
+  description: 'Configurar permisos para formulario de registro de usuarios'
+  restrict access: true
+
+administer users_consult:
+  title: 'Administrador Consulta usuarios'
+  description: 'Configurar permisos para consulta de usuarios'
+  restrict access: true
+
+administer users_import:
+  title: 'Administrador importar usuarios'
+  description: 'Configurar permisos para importar usuarios de usuarios'
+  restrict access: true

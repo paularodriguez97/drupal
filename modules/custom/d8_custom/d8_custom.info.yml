@@ -1,0 +1,4 @@
+type: module
+name: Custom Module
+description: 'Modulo custom'
+core: 8.x

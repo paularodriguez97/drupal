@@ -1,0 +1,47 @@
+<?php
+/*
+ * Implements hook_form_alter().
+ */
+
+use Drupal\Core\Datetime\DateFormatter;
+use Drupal\Core\Form\FormStateInterface;
+
+function users_d8_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id){
+    case 'user_login_form':
+      $form['#submit'][] = 'users_d8_user_access_form_submit';
+      break;
+  }
+}
+
+function users_d8_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id){
+  $form['actions']['submit']['#submit'][] = 'users_d8_user_access_form_submit';
+}
+
+function users_d8_user_access_form_submit($form, FormStateInterface $form_state){
+  $form_id = $form_state->getBuildInfo()['form_id'];
+  if ($form_id == 'user_login_form'){
+    $type = 'login';
+    $info = $form_state->getStorage();
+    $uid = $info['uid'];
+  }else{
+    $type = 'resgistro';
+    $info = $form_state->getStorage()['user'];
+    $uid = $info->id();
+  }
+  $database = \Drupal::database();
+  if ($uid) {
+    $database->insert('access_log_user')
+      ->fields([
+        'fecha',
+        'ip',
+        'uid',
+        'tipo_log',
+      ])->values([
+        'fecha' => \Drupal::service('date.formatter')->format(time(), 'custom', 'Y-m-d H:i:s'),
+        'ip' => \Drupal::request()->getClientIp(),
+        'uid' => $uid,
+        'tipo_log' => $type,
+      ])->execute();
+  }
+}

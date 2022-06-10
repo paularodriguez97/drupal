@@ -1,0 +1,49 @@
+users_d8.home:
+  path: 'home'
+  defaults:
+    _controller: '\Drupal\users_d8\Controller\HomeController::view'
+    _title: 'Home'
+  requirements:
+    _permission: 'access content'
+
+users_d8.register_user:
+  path: 'usuario/registro'
+  defaults:
+    _form: '\Drupal\users_d8\Form\RegisterUser'
+    _title: 'Registrar usuario'
+  requirements:
+    _permission: 'access content'
+
+users_d8.list_user:
+  path: 'usuario/consulta'
+  defaults:
+    _controller: '\Drupal\users_d8\Controller\ControllerUsersBasic::listUser'
+    _title: 'Lista de usuarios registrados'
+  requirements:
+    _permission: 'access content'
+
+users_d8.import:
+  path: 'usuario/importar'
+  defaults:
+    _form: '\Drupal\users_d8\Form\ImportUser'
+    _title: 'Importar usuarios'
+  requirements:
+    _permission: 'access content'
+
+users_d8.export:
+  path: 'usuario/consulta/excel'
+  defaults:
+    _controller: '\Drupal\users_d8\Controller\ControllerUsersBasic::exportUser'
+    _title: 'Exportar registros'
+  requirements:
+    _permission: 'access content'
+
+users_d8.log_access:
+  path: 'log/users'
+  defaults:
+    _controller: '\Drupal\users_d8\Controller\ControllerUsersBasic::logUsers'
+    _title: 'Registro de accesos usuarios'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: TRUE

@@ -1,0 +1,4 @@
+services:
+  scraping.service:
+    class: \Drupal\scraping\Services\ScrapingServices
+    arguments: ["@http_client"]

@@ -1,0 +1,6 @@
+scraping.admin_config:
+  title: 'scraping'
+  description: 'Admin Scraping'
+  parent: system.admin
+  route_name: scraping.admin_config
+  weight: 10

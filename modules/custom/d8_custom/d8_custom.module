@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function d8_custom_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /*switch ($form_id) {
+    case 'webform_submission_clases_add_form':
+      ksm($form['elements']['class']);
+      $form['elements']['class']['#title'] = 'Class Subject';
+      break;
+  }*/
+}

@@ -1,0 +1,4 @@
+type: module
+name: scraping module custom
+description: 'Modulo para scraping'
+core: 8.x
