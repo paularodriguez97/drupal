@@ -114,8 +114,7 @@ div.help ul:last-child {
 .block-region {
   -webkit-border-radius:6px;
   -moz-border-radius:6px;
-  -khtml-border-radius:6
-  border-radius:6
+  -khtml-border-radius:6px;
   border-radius:6px;
   background-color:#F7F8F8;
   border:2px dashed #DDD;
