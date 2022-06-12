@@ -584,24 +584,17 @@ function at_core_js_settings_alter(array &$settings, \Drupal\Core\Asset\Attached
  */
 function at_core_library_info_alter(&$libraries, $extension) {
   // Layouts (Plugin or Discovery).
-  if ($extension === 'at_core') {
+  if ($extension === 'layout_plugin' || $extension === 'at_core') {
     // Theme data.
-    $data = new ThemeConfig(\Drupal::theme()->getActiveTheme()->getName());
-    $theme = $data->getConfig();
+    $theme = &drupal_static(__FUNCTION__);
+    if (!isset($theme)) {
+      $data = new ThemeConfig(\Drupal::theme()->getActiveTheme()->getName());
+      $theme = $data->getConfig();
+    }
 
     // Replace layout_plugin CSS auto-magically. This avoids the whole issue
     // of absolute paths in libraries-override in the info.yml file.
-    // First check if this is a pre 3.x theme.
-    $layout_plugin_dir = '';
-    if (is_dir($theme['path'] . '/layout/plugin-layout')) {
-      $layout_plugin_dir = $theme['path'] . '/layout/plugin-layout/css';
-    }
-    else {
-      if (is_dir($theme['path'] . '/styles/layout_plugin')) {
-        $layout_plugin_dir = $theme['path'] . '/styles/layout_plugin/css';
-      }
-    }
-    if (!empty($layout_plugin_dir)) {
+    if (is_dir($theme['path'] . '/styles/layout_plugin')) {
       $library_names = LayoutDiscoveryPlugin::libraryNames();
       foreach ($libraries as $lib_key => $library) {
         if (in_array($lib_key, $library_names)) {
@@ -613,7 +606,7 @@ function at_core_library_info_alter(&$libraries, $extension) {
           else {
             $filename = $lib_key;
           }
-          $new_css = $layout_plugin_dir . '/' . $filename . '.css';
+          $new_css = $theme['path'] . '/styles/layout_plugin/css/' . $filename .  '.css';
           if (file_exists($new_css)) {
             $libraries[$lib_key]['css']['theme'] = ['/' . $new_css => []];
           }

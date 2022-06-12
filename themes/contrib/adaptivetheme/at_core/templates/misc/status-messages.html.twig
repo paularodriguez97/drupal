@@ -26,7 +26,7 @@
 {% block messages %}
   {%- for type, messages in message_list -%}
     {%- set classes = ['messages', 'messages--' ~ type] -%}
-    <div role="status" aria-label="{{- status_headings[type] -}}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
+    <div role="contentinfo" aria-label="{{- status_headings[type] -}}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
       <div class="messages__container"{% if type == 'error' %} role="alert"{% endif %}>
 
         {%- if status_headings[type] -%}

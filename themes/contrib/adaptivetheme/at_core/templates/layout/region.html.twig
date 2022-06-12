@@ -20,5 +20,5 @@
   ]
 -%}
 {%- if content -%}
-  <div {{ attributes.addClass(classes) }} id="rid-{{ region|clean_id }}">{{- content -}}</div>
+  <div {{ attributes.addClass(classes) }}>{{- content -}}</div>
 {%- endif -%}

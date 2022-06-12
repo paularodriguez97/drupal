@@ -42,16 +42,13 @@ function at_core_preprocess_html(&$variables) {
   //$themeConfig = new ThemeConfig($active_theme_name);
   $config = $variables['theme']['config'];
 
-  // Set active theme name.
-  $active_theme_name = $variables['theme']['name'];
-
   // Reset $variables['directory'] if this is a skin theme.
   if ($variables['theme']['type'] === 'adaptive_skin' && !empty($variables['theme']['base'])) {
     $variables['directory'] = $variables['theme']['path'];
   }
 
   // Set the skip navigation target ID
-  $variables['skip_link_target'] = '#block-' . Html::cleanCssIdentifier($active_theme_name) . '-content';
+  $variables['skip_link_target'] = '#main-content';
 
   // Defaults for Appearance setting variables.
   $variables['touch_icons'] = [];

@@ -1,6 +1,6 @@
 # One column
 onecol:
-  label: 'Adaptivetheme One Column'
+  label: Adaptivetheme One Column
   category: Adaptivetheme Layouts
   type: partial
   path: layout_plugin

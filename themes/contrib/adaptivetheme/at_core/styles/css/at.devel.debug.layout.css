@@ -20,75 +20,59 @@ body {
   padding-bottom: 0;
   background-color: ghostwhite;
 }
-
 .page-row .regions {
   padding: 20px 0 10px 0;
   background: transparent;
 }
-
 .page-row .region {
   margin-bottom: 10px;
   position: relative;
   background: rgba(0, 0, 0, 0.65);
   font: 12px/1 Arial;
 }
-
 .page-row .region .block,
 .page-row .region .block * {
   display: none !important;
 }
-
 .page-row .region:before {
   position: absolute;
   top: 3px;
   left: 3px;
   color: rgba(255, 255, 255, 0.5);
 }
-
 .page-row .region:first-child:before {
   content: "Region 1";
 }
-
 .page-row .region:nth-child(2):before {
   content: "Region 2";
 }
-
 .page-row .region:nth-child(3):before {
   content: "Region 3";
 }
-
 .page-row .region:nth-child(4):before {
   content: "Region 4";
 }
-
 .page-row .region:nth-child(5):before {
   content: "Region 5";
 }
-
 .page-row .region:nth-child(6):before {
   content: "Region 6";
 }
-
 .page-row .region:nth-child(7):before {
   content: "Region 7";
 }
-
 .page-row .region:nth-child(8):before {
   content: "Region 8";
 }
-
 .page-row .region:nth-child(9):before {
   content: "Region 9";
 }
-
 .page-row .region:nth-child(10):before {
   content: "Region 10";
 }
-
 .page-row .region:nth-child(11):before {
   content: "Region 11";
 }
-
 .page-row .region:nth-child(12):before {
   content: "Region 12";
 }
@@ -121,4 +105,4 @@ html, body {
   margin-top: 40px;
 }
 */
-/*# sourceMappingURL=at--devel-debug-layout.css.map */
+/*# sourceMappingURL=at.devel.debug.layout.css.map */

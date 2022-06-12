@@ -47,7 +47,7 @@
     <path class="rm-toggle__icon__path" d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"/>
   </symbol>
 </svg>
-<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }} id="{{ plugin_id|clean_id }}">
+<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
   <div class="rm-block__inner">
     <div{{ title_attributes.addClass('rm-toggle')|without('id') }}>
       <button href="#rm-content" class="rm-toggle__link un-button" role='button' aria-controls="rm-content" aria-expanded="false">
@@ -66,8 +66,6 @@
           <span id="rm-accordion-trigger" class="hidden">
             <button class="rm-accordion-trigger un-button" role='button' aria-controls="child-menu" aria-expanded="false">
               <svg class="rm-accordion-trigger__icon" viewBox="0 0 1792 1792" preserveAspectRatio="xMinYMid meet"><path d="M1600 736v192q0 40-28 68t-68 28h-416v416q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-416h-416q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h416v-416q0-40 28-68t68-28h192q40 0 68 28t28 68v416h416q40 0 68 28t28 68z"/></svg>
-              {# Button text for accessibility. #}
-              <span class="visually-hidden">{% trans %}Toggle sub-menu{% endtrans %}</span>
             </button>
           </span>
         {%- endif -%}

@@ -124,27 +124,4 @@ class ExtGet {
     return $image_styles;
   }
 
-  /**
-   * @param $file_path
-   * @return array
-   */
-  public function getSassVariables($file_path) {
-    $sass_variables = [];
-
-    if (file_exists($file_path)) {
-      $lines = file($file_path);
-
-      foreach ($lines as $i => $line) {
-        // Check the line is a variable.
-        if (substr($line, 0, 1) === '$') {
-          $line_arr = explode(":", $line);
-          $key = trim(str_replace('$', '', $line_arr[0]));
-          $value = trim(str_replace(';', '', $line_arr[1]));
-          $sass_variables[$key] = $value;
-        }
-      }
-    }
-
-    return $sass_variables;
-  }
 }

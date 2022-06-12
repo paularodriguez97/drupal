@@ -330,7 +330,7 @@ at.windowsize:
   version: VERSION
   css:
     component:
-      styles/css/at--windowSize.css: {}
+      styles/css/at.windowSize.css: {}
   js:
     scripts/min/at.windowSize.min.js: { minified: true }
     #scripts/at.windowSize.js: {}
@@ -343,13 +343,13 @@ at.devel_debug_layout:
   version: VERSION
   css:
     theme:
-      styles/css/at--devel-debug-layout.css: {}
+      styles/css/at.devel.debug.layout.css: {}
 
 at.devel_colorize_regions:
   version: VERSION
   css:
     theme:
-      styles/css/at--devel-colorize-regions.css: {}
+      styles/css/at.devel.colorize.regions.css: {}
 
 at.livereload:
   version: VERSION
@@ -360,14 +360,14 @@ at.devel_nuke_toolbar:
   version: VERSION
   css:
     theme:
-      styles/css/at--devel-nuke-toolbar.css: {}
+      styles/css/at.devel.nuke.toolbar.css: {}
 
 # Appearance settings scripts
 at.appearance_settings:
   version: VERSION
   css:
     theme:
-      styles/css/at.css: {}
+      styles/css/at.appearance.css: {}
   js:
     scripts/min/at.appearance.min.js: { minified: true }
     #scripts/at.appearance.js: {}
@@ -397,7 +397,7 @@ at.bc:
   version: VERSION
   css:
     component:
-      styles/css/at--bc.css: {}
+      styles/css/at.bc.css: {}
 
 # Layout Discovery layouts. On Drupal 8.3.x and over Layout Discovery replaces
 # Layout Plugin and uses standard libraries.

@@ -154,9 +154,6 @@ function at_core_form_system_theme_settings_alter(&$form, FormStateInterface $fo
         '#value' => $generated_files_path,
       ];
 
-      // theme info block
-      require_once($at_core_path . '/forms/theme_info.php');
-
       // Check for breakpoint module, a lot of errors without it, this is brutal.
       if ($breakpoint_module === TRUE) {
         if ($getThemeInfo['subtheme type'] === 'adaptive_subtheme') {

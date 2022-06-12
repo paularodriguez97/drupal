@@ -8,30 +8,10 @@
 // Import global variables.
 @import "variables";
 
-body {
-  .toolbar-no-tabs {
-    padding-top: $tab-item-height !important;
-  }
-}
-
 #toolbar-administration {
   font-family: $font-family;
-  font-weight: 400;
-  font-size: $font-size;
-  height: $tab-item-height * 2;
-  background-color: $toolbar-bar-background;
   tap-highlight-color: $tap-highlight;
-
-  .toolbar-vertical &,
-  .toolbar-no-tabs &,
-  .toolbar-tab,
-  .toolbar-tray {
-    height: $tab-item-height;
-  }
-
-  .toolbar-tray {
-    top: $tab-item-height;
-  }
+  font-weight: 400;
 
   .toolbar-tab,
   .toolbar-item {
@@ -39,7 +19,6 @@ body {
       &:hover,
       &:focus {
         text-decoration: none;
-        outline: none;
       }
     }
   }
@@ -310,7 +289,6 @@ body {
   .toolbar-tray-vertical {
     background-color: $tray-vertical-background;
     border-right: 1px solid $border-color;
-    height: 100%;
 
     @if $drop-shadows == true {
       box-shadow: 0 3px 5px 2px $drop-shadow-color;

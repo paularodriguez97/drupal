@@ -38,7 +38,7 @@
   ]
 -%}
 {%- set heading_id = attributes.id ~ '-title'|clean_id -%}
-<div{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}{%- if label %} role="region" aria-labelledby="{{ heading_id }}"{%- endif -%} id="{{ plugin_id|clean_id }}">
+<div{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}{%- if label %} role="region" aria-labelledby="{{ heading_id }}"{%- endif -%}>
   <div class="block__inner">
 
     {{ title_prefix }}

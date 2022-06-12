@@ -49,7 +49,7 @@ class LayoutCompatible {
       }
       else {
         $compatible_layout = '';
-        drupal_set_message(t('"layout" not declared in info file. Adaptivetheme requires a compatible layout to be declared in your theme info file e.g. "layout: page-layout". Add the declaration, clear the cache and try again.'), 'error');
+        drupal_set_message(t('"layout" not declared in info file. Adaptivetheme requires a compatible layout to be declared in your theme info file e.g. "layout: site-builder". Add the declaration, clear the cache and try again.'), 'error');
       }
 
       // Push the current theme into the array - if it has a layout, use it.
