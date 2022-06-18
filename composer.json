@@ -24,6 +24,7 @@
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/devel": "^4.1",
         "drupal/facebook_comments": "^1.0",
+        "drupal/flag": "4.x-dev@dev",
         "drupal/views_accordion": "^1.1",
         "drupal/views_fieldsets": "^3.4",
         "drupal/webform": "^6.0",
