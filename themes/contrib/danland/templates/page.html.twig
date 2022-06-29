@@ -34,33 +34,35 @@
   <div style="clear:both"></div>
 
   {% if is_front %}
-    <div id="slideshow-wrapper">
-      <div class="slideshow-inner">
-        {% if page.preface %}
-          <div id="slideshow-preface">
-            <div id="preface">
-              {{ page.preface }}
-            </div><!-- end preface -->
-          </div>
-        {% endif %}
-        {% if page.highlighted %}
-          <div id="slideshow-bottom">
-            <div id="mission">{{ page.highlighted }}</div>
-          </div>
-        {% endif %}
-        {% if page.slideshow %}
-          <div class="custom-slideshow">
-            {{ page.slideshow }}
-          </div>
-		{% else %}
-          <div class="slideshow">
-            <img src="{{ slide1_image }}" width="100%" height="100%" />
-            <img src="{{ slide2_image }}" width="100%" height="100%" />
-            <img src="{{ slide3_image }}" width="100%" height="100%" />
-          </div>
-        {% endif %}
+    {% if  slideshow_display  %}
+      <div id="slideshow-wrapper">
+        <div class="slideshow-inner">
+          {% if page.preface %}
+            <div id="slideshow-preface">
+              <div id="preface">
+                {{ page.preface }}
+              </div><!-- end preface -->
+            </div>
+          {% endif %}
+          {% if page.highlighted %}
+            <div id="slideshow-bottom">
+              <div id="mission">{{ page.highlighted }}</div>
+            </div>
+          {% endif %}
+          {% if page.slideshow %}
+            <div class="custom-slideshow">
+              {{ page.slideshow }}
+            </div>
+          {% else %}
+            <div class="slideshow">
+              <img src="{{ slide1_image }}" width="100%" height="100%" />
+              <img src="{{ slide2_image }}" width="100%" height="100%" />
+              <img src="{{ slide3_image }}" width="100%" height="100%" />
+            </div>
+          {% endif %}
+        </div>
       </div>
-    </div>
+    {% endif %}
   {% endif %}
 
   {% if page.preface_first or page.preface_middle or page.preface_last %}
