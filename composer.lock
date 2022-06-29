@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c27cf115ec28cd71b2d3a0541ca38f8",
+    "content-hash": "f1e00ab65b0aa32eab73d35bd305272c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1199,6 +1199,58 @@
             "keywords": [
                 "drupal"
             ]
+        },
+        {
+            "name": "drupal/danland",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/danland.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/danland-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "dea2f166371681bfb04acb34e1983ef90d2b6093"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1605988295",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "danpros",
+                    "homepage": "https://www.drupal.org/user/690640"
+                },
+                {
+                    "name": "jcnventura",
+                    "homepage": "https://www.drupal.org/user/122464"
+                },
+                {
+                    "name": "kunalkapoor",
+                    "homepage": "https://www.drupal.org/user/3601275"
+                }
+            ],
+            "description": "Drupal Theme provided by <a href=\"http://www.danetsoft.com\">Danetsoft</a> developed by <a href=\"http://www.danpros.com\">Danang Probo Sayekti</a> inspired by <a href=\"http://www.maksimer.no\">Maksimer</a>.",
+            "homepage": "https://www.drupal.org/project/danland",
+            "support": {
+                "source": "https://git.drupalcode.org/project/danland"
+            }
         },
         {
             "name": "drupal/devel",
@@ -4988,6 +5040,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/danland": 10,
         "drupal/flag": 20,
         "drupal/webform_shs": 15
     },

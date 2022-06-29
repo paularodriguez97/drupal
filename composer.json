@@ -22,6 +22,7 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
+        "drupal/danland": "^1.0@beta",
         "drupal/devel": "^4.1",
         "drupal/facebook_comments": "^1.0",
         "drupal/flag": "4.x-dev@dev",
