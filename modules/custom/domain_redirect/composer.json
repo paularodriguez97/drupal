@@ -1,0 +1,19 @@
+{
+    "name": "drupal/domain_redirect",
+    "description": "Redirects a group to your domain if configured.",
+    "type": "drupal-module",
+    "homepage": "https://www.drupal.org/project/module_domain_redirect",
+    "license": "GPL-2.0+",
+    "require": {
+      "drupal/core": "8.x"
+    },
+    "repositories": {
+      "drupal": {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+      }
+    },
+    "require-dev": {
+        "drupal/domain_group": "^2.0",
+    }
+  }
