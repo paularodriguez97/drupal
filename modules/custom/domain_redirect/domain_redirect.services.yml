@@ -1,0 +1,6 @@
+services:
+  domain_redirect.default:
+    class: Drupal\domain_redirect\EventSubscriber\GroupDomainRedirect
+    arguments: []
+    tags:
+      - { name: event_subscriber }
