@@ -14,6 +14,6 @@
       }
     },
     "require-dev": {
-        "drupal/domain_group": "^2.0",
+        "drupal/domain_group": "^2.0"
     }
   }
