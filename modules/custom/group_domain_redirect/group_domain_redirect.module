@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains domain_redirect.module.
+ * Contains group_domain_redirect.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,9 +10,9 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function domain_redirect_help($route_name, RouteMatchInterface $route_match) {
+function group_domain_redirect_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the domain_redirect module.
+    // Main module help for the group_domain_redirect module.
     case 'help.page.domain_redirect':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';

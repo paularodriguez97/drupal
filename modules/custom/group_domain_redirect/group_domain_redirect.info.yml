@@ -1,4 +1,4 @@
-name: Domain Redirect - Group to domain redirection
+name: Group Domain Redirect - Group to domain redirection
 type: module
 description: Redirects a group to your domain if configured.
 core: 8.x

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\domain_redirect\EventSubscriber;
+namespace Drupal\group_domain_redirect\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\Event;
